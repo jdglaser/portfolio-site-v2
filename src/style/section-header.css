@@ -1,0 +1,18 @@
+.section-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  gap: 15px;
+}
+
+.section-header-label {
+  width: fit-content;
+  font-size:x-large;
+}
+
+.section-header-line {
+  height: 1px;
+  background-color: #5ED4BC;
+  flex-grow: 1;
+}
