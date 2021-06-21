@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import Hamburger from "hamburger-react";
 import { useCommonProps } from "../hooks";
+import resumeUrl from "../static/resume_jarredglaser.pdf?url";
 
 export default function NavMenu() {
   const [hideNoAnimation, setHideNoAnimation] = useState(false);
@@ -31,7 +32,7 @@ export default function NavMenu() {
           <a onClick={handleClick} href="#education" className="hover-animate">Education</a>
           <a onClick={handleClick} href="#projects" className="hover-animate">Projects</a>
           <a onClick={handleClick} href="#contact" className="hover-animate">Contact</a>
-          <button onClick={handleClick}><a href="./src/static/resume_jarredglaser.pdf" target="_blank">Resume</a></button>
+          <button onClick={handleClick}><a href={resumeUrl} target="_blank">Resume</a></button>
         </div>
       </div>
     </>
