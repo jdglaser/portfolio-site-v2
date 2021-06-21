@@ -1,6 +1,6 @@
 import Hamburger from "hamburger-react";
 import React, { useState } from "react"
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 import { useCommonProps } from "../hooks";
 import NavMenu from "./NavMenu";
 import "../style/navbar.css";
@@ -21,19 +21,19 @@ export default function Navbar() {
       {isMenuOpen ? (
         <div className="navbar-overlay"></div>
       ) : <></>}
-      <Fade left>
+      <Fade direction="left">
         <div className="logo cool-font">
           <a href="../"><span className="light-green">JG</span></a>
         </div>
       </Fade>
-      <Fade right>
-        <div className="hamburger">
+      <div className="hamburger">
+      <Fade direction="right">
           <Hamburger toggled={isMenuOpen} 
                      onToggle={isMenuOpen ? closeMenu : openMenu}
                      color="#5ED4BC"
-                     size={26}/>
-        </div>
+                     size={26} />
       </Fade>
+      </div>
       <NavMenu />
       </div>
     </>

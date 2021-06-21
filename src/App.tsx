@@ -5,9 +5,9 @@ import Splash from './components/Splash'
 import ScreenOverlay from "./components/ScreenOverlay"
 import logo from './logo.svg'
 import './style/app.css'
-import Fade from "react-reveal"
 import AboutMe from './components/AboutMe'
 import { useCommonProps, useScrollBlock } from './hooks'
+import Experience from './components/Experience'
 
 function App() {
   console.log("here")
@@ -34,6 +34,9 @@ function App() {
 
         <a id="about-me" className="anchor" />
         <AboutMe />
+
+        <a id="experience" className="anchor" />
+        <Experience />
       </div>
     </div>
   )

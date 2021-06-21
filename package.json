@@ -8,8 +8,8 @@
   "dependencies": {
     "hamburger-react": "^2.4.1",
     "react": "^17.0.0",
-    "react-dom": "^17.0.0",
-    "react-reveal": "^1.2.2"
+    "react-awesome-reveal": "^3.8.1",
+    "react-dom": "^17.0.0"
   },
   "devDependencies": {
     "@types/react": "^17.0.0",

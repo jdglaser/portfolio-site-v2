@@ -1,12 +1,12 @@
 import React from "react";
-import Fade from "react-reveal/Fade";
+import { Fade } from "react-awesome-reveal";
 import "../style/splash.css";
 
 export default function Splash() {
   return (
     <>
         <div className="header">
-          <Fade left cascade>
+          <Fade direction="left" cascade triggerOnce>
             <div className="header-description">
               <span className="light-green cool-font">Hello, my name is</span>
               <h1 className="light-green">Jarred Glaser</h1>
