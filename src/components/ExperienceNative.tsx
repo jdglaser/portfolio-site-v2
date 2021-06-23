@@ -31,7 +31,11 @@ function JobItem(props: JobItemProps) {
         </ul>
       </div>
       <div className={`${styles["arrow"]} light-green`}
-           onClick={nextJob}>❯</div>
+           onClick={nextJob}>
+        <div className={styles["arrow-holder"]}>
+          ❯
+        </div>
+      </div>
     </div>
   )
 }
