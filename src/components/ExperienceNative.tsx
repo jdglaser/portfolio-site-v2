@@ -100,9 +100,7 @@ export default function ExperienceNative() {
         {experienceSelectorItems}
       </div>
       <div className={styles["selected-job"]}>
-        <Fade>
         {jobItems}
-        </Fade>
       </div>
     </div>
   )
