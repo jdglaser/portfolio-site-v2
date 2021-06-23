@@ -1,0 +1,45 @@
+.experience-item {
+  overflow: hidden;
+  height: 100px;
+  transition: background-color 0.3s ease;
+}
+
+.experience-item.active {
+  background-color: #0e305a;;
+}
+
+.experience-item-active-border {
+  border-left: 2px solid #5ED4BC;
+  position:absolute;
+  height: 50px;
+}
+
+.experience-item::before {
+  content: " ";
+  border: 1px solid #B4A6AB; 
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  height: 100%;
+  transform: scaleY(1);
+  transform-origin: top;
+  transition: transform 0.5s ease;
+}
+
+.experience-item.active::before {
+  transform-origin: bottom;
+  transform: scaleY(0);
+}
+
+.experience-item {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.experience-item.active {
+  color: #5ED4BC
+}

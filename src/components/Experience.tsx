@@ -1,46 +1,30 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import ExperienceDesktop from "./ExperienceDesktop";
+import ExperienceNative from "./ExperienceNative";
 import SectionHeader from "./SectionHeader";
-
-interface ExperienceItem {
-  companyName: string
-  time: string
-  jobTitle: string
-  bulletPoints: string[]
-}
-
-const experienceItems: ExperienceItem[] = [
-  {
-    companyName: "Northwestern Mutual",
-    time: "Aug 2020 - Present",
-    jobTitle: "Software Engineer",
-    bulletPoints: [
-      "Created stuff",
-      "Wrote code",
-      "Had fun"
-    ]
-  }
-]
-
-interface ExperienceListItemProps {
-  item: ExperienceItem
-  setActiveItem: (item: ExperienceItem) => void
-}
-
-function ExperienceListItem(props: ExperienceListItemProps) {
-  const {item, setActiveItem} = props;
-
-
-}
+import "../style/experience.css";
 
 export default function Experience() {
-  return (
-    <>
-      <SectionHeader label="Experience" />
-      <div className="experience">
-        <div className="experience-navigator">
+  const [isDesktop, setDesktop] = useState<boolean>(window.innerWidth > 600);
 
-        </div>
-      </div>
-    </>
+  const updateMedia = () => {
+    setDesktop(window.innerWidth > 600);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", updateMedia);
+    return () => window.removeEventListener("resize", updateMedia);
+  });
+
+  return (
+    <div className="experience-section">
+      <SectionHeader label="Experience" />
+      {isDesktop ? (
+        <ExperienceDesktop />
+        ) : (
+         <ExperienceNative />
+         )
+      }
+    </div>
   )
 }

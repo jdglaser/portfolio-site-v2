@@ -8,6 +8,7 @@ import './style/app.css'
 import AboutMe from './components/AboutMe'
 import { useCommonProps, useScrollBlock } from './hooks'
 import Experience from './components/Experience'
+import ExperienceNative from './components/ExperienceNative'
 
 function App() {
   console.log("here")

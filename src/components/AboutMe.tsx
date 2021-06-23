@@ -64,7 +64,7 @@ export default function AboutMe() {
           <div>Here are some things I know...</div>
         </Fade>
         <div className="skills-list">
-          <Fade direction="left" fraction={0.15} duration={500} cascade triggerOnce>
+          <Fade direction="left" fraction={0.15} duration={250} cascade triggerOnce>
             {skillItems}
           </Fade>
         </div>

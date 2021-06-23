@@ -1,3 +1,8 @@
+/* Global Vars */
+:root {
+  --job-selector-height: 25px; 
+}
+
 /* Default override styles */
 * {
   box-sizing: border-box;
@@ -77,6 +82,7 @@ a.hover-animate:after {
   content: "";
   border-bottom: 1px solid #5ED4BC;
   transform: scaleX(0);
+  transform-origin: left;
   transition: all 0.3s ease-in-out;
 }
 
