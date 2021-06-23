@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styles from "../style/experience-native.module.css";
 import {jobs, ExperienceItem} from "../static/jobs";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import {Fade} from "react-awesome-reveal";
 import { useSwipeable } from "react-swipeable";
 
 interface JobItemProps {
@@ -16,7 +15,7 @@ function JobItem(props: JobItemProps) {
   const {item, isActive, nextJob, prevJob} = props;
 
   return (
-    <div className={`${styles["experience-item"]} ${isActive ? styles["active"] : ""}`}>
+    <div key={item.id} className={`${styles["experience-item"]} ${isActive ? styles["active"] : ""}`}>
       <div className={`${styles["arrow"]} light-green`}
            onClick={prevJob}>❮</div>
       <div className={styles["experience-item-info"]}>
@@ -47,7 +46,7 @@ function JobSelectorItem(props: JobSelectorItemProps) {
   const {item, setActiveItem, isActive} = props;
 
   return (
-    <div className={`${styles["job-selector"]} ${isActive ? styles["active"] : ""}`}
+    <div key={item.id} className={`${styles["job-selector"]} ${isActive ? styles["active"] : ""}`}
          onClick={() => setActiveItem(item)}>
     </div>
   )
@@ -57,7 +56,8 @@ export default function ExperienceNative() {
   const [activeItem, setActiveItem] = useState<ExperienceItem>(jobs[0]);
 
   const experienceSelectorItems = jobs.map(job => (
-    <JobSelectorItem item={job}
+    <JobSelectorItem key={job.id}
+                     item={job}
                      setActiveItem={(job) => setActiveItem(job)}
                      isActive={job.id === activeItem.id} />
   ))
@@ -83,7 +83,8 @@ export default function ExperienceNative() {
   }
 
   const jobItems = jobs.map(job => (
-    <JobItem item={job}
+    <JobItem key={job.id}
+             item={job}
              isActive={job.id === activeItem.id}
              nextJob={nextJob}
              prevJob={prevJob} />
