@@ -53,7 +53,7 @@ function JobSelectorItem(props: JobSelectorItemProps) {
 }
 
 export default function ExperienceNative() {
-  const [activeItem, setActiveItem] = useState<ExperienceItem>(jobs[0]);
+  const [activeItem, setActiveItem] = useState<ExperienceItem>(jobs[1]);
 
   const experienceSelectorItems = jobs.map(job => (
     <JobSelectorItem key={job.id}
