@@ -1,11 +1,13 @@
 import React from "react";
 import { Fade } from "react-awesome-reveal";
 import "../style/splash.css";
+import Delayed from "./Delayed";
 
 export default function Splash() {
   return (
     <>
-        <div className="header">
+      <div className="header">  
+        <Delayed waitForSeconds={0.8}>
           <Fade direction="left" cascade triggerOnce>
             <div className="header-description">
               <span className="light-green cool-font">Hello, my name is</span>
@@ -17,7 +19,8 @@ export default function Splash() {
               <button>Contact</button>
             </div>
           </Fade>
-        </div>
+        </Delayed>
+      </div>
     </>
   )
 }

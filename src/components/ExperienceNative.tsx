@@ -3,6 +3,8 @@ import styles from "../style/experience-native.module.css";
 import {jobs, ExperienceItem} from "../static/jobs";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { useSwipeable } from "react-swipeable";
+import SectionHeader from "./SectionHeader";
+import {Fade} from "react-awesome-reveal";
 
 type Direction = "forward" | "backward";
 
@@ -121,13 +123,18 @@ export default function ExperienceNative() {
   })
 
   return (
-    <div className={styles["jobs"]} {...handlers}>
-      <div className={styles["job-selectors"]}>
-        {experienceSelectorItems}
-      </div>
-      <div className={styles["selected-job"]}>
-        {jobItems}
-      </div>
+    <div className={styles["experience-section"]}>
+      <Fade direction="up" fraction={0.01} triggerOnce>
+          <SectionHeader label="Experience" />
+          <div className={styles["jobs"]} {...handlers}>
+            <div className={styles["job-selectors"]}>
+              {experienceSelectorItems}
+            </div>
+            <div className={styles["selected-job"]}>
+              {jobItems}
+            </div>
+          </div>
+      </Fade>
     </div>
   )
 }

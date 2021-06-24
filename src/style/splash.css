@@ -3,10 +3,7 @@
   flex-direction: column;
   gap: 20px;
   width: fit-content;
-}
-
-.splash-holder {
-  height: 80vh;
+  min-height: calc(100vh - 100px);
 }
 
 .header-description {
