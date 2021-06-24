@@ -29,7 +29,6 @@ export default function NavMenu() {
         <div className="nav-menu-content cool-font">
           <a onClick={handleClick} href="#about-me" className="hover-animate">About</a>
           <a onClick={handleClick} href="#experience" className="hover-animate">Experience</a>
-          <a onClick={handleClick} href="#education" className="hover-animate">Education</a>
           <a onClick={handleClick} href="#projects" className="hover-animate">Projects</a>
           <a onClick={handleClick} href="#contact" className="hover-animate">Contact</a>
           <button onClick={handleClick}><a href={resumeUrl} target="_blank">Resume</a></button>

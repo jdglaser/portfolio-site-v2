@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../style/experience-native.module.css";
 import {jobs, ExperienceItem} from "../static/jobs";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
@@ -20,28 +20,30 @@ function JobItem(props: JobItemProps) {
   const {item, isActive, nextJob, prevJob, direction} = props;
 
   return (
-    <div key={item.id} className={`${styles["experience-item"]} ${isActive ? styles["active"] : ""} ${styles[direction]}`}>
-      <div className={`${styles["arrow"]} light-green`}
-           onClick={prevJob}>❮</div>
-      <div className={styles["experience-item-info"]}>
-        <h3 className="light-green">{item.companyName}</h3>
-        <span>{item.title}</span>
-        <span>{item.time}</span>
-        <ul className={styles["experience-item-points"]}>
-        {item.bulletPoints.map(point => (
-          <li>
-            {point}
-          </li>
-        ))}
-        </ul>
-      </div>
-      <div className={`${styles["arrow"]} light-green`}
-           onClick={nextJob}>
-        <div className={styles["arrow-holder"]}>
-          ❯
+    <>
+      <div className={`${styles["experience-item"]} ${isActive ? styles["active"] : ""} ${styles[direction]}`}>
+        <div className={`${styles["arrow"]} light-green`}
+            onClick={prevJob}>❮</div>
+        <div className={styles["experience-item-info"]}>
+          <h3 className="light-green">{item.companyName}</h3>
+          <span>{item.title}</span>
+          <span>{item.time}</span>
+          <ul className={styles["experience-item-points"]}>
+          {item.bulletPoints.map(point => (
+            <li>
+              {point}
+            </li>
+          ))}
+          </ul>
+        </div>
+        <div className={`${styles["arrow"]} light-green`}
+            onClick={nextJob}>
+          <div className={styles["arrow-holder"]}>
+            ❯
+          </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 
@@ -67,7 +69,7 @@ function JobSelectorItem(props: JobSelectorItemProps) {
   }
 
   return (
-    <div key={item.id} className={`${styles["job-selector"]} ${activeItem.id === item.id ? styles["active"] : ""} ${styles[direction]}`}
+    <div className={`${styles["job-selector"]} ${activeItem.id === item.id ? styles["active"] : ""} ${styles[direction]}`}
          onClick={handleClick}>
     </div>
   )

@@ -1,13 +1,12 @@
 import React, { useState } from 'react'
-import Delayed from './components/Delayed'
 import Navbar from './components/Navbar'
 import Splash from './components/Splash'
 import ScreenOverlay from "./components/ScreenOverlay"
-import logo from './logo.svg'
 import './style/app.css'
 import AboutMe from './components/AboutMe'
 import { useCommonProps, useScrollBlock } from './hooks'
 import ExperienceNative from './components/ExperienceNative'
+import Projects from './components/Projects'
 
 function App() {
   console.log("here")
@@ -34,12 +33,8 @@ function App() {
         <a id="experience" className="anchor" />
         <ExperienceNative />
 
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
+        <a id="projects" className="anchor" />
+        <Projects />
       </div>
     </div>
   )
