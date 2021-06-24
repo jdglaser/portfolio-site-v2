@@ -14,10 +14,16 @@
   height: var(--job-selector-height);
   border-bottom: 2px solid #B4A6AB;
   cursor: pointer;
+  background-color: inherit;
+  transition: background-color 0.4s;
+}
+
+.job-selector:hover {
+  background-color: #0e305a;
 }
 
 .job-selector.active {
-  background-color: #0e305a;;
+  background-color: #0e305a;
 }
 
 .job-selector::after {
@@ -32,15 +38,31 @@
 }
 
 .job-selector.active::after {
-  border-bottom: 2px solid #5ED4BC;
   transform-origin: left;
   transform: scaleX(1);
+}
+
+.job-selector.backward::after {
+  transform-origin: left;
+}
+
+.job-selector.forward::after {
+  transform-origin: right;
+}
+
+.job-selector.active.backward::after {
+  transform-origin: right;
+}
+
+.job-selector.active.forward::after {
+  transform-origin: left;
 }
 
 .selected-job {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
+  width: 100%;
 }
 
 .experience-item {
@@ -52,18 +74,40 @@
   width: 100%;
   padding: 0px 5px;
   background-color: #0e305a;
-  transform: scaleY(0);
-  transform-origin: bottom;
+  transform: scaleX(0);
   transition: transform 0.3s;
+}
+
+.experience-item.active {
+  transform: scaleX(1);
+}
+
+.experience-item.backward {
+  transform-origin: right;
+}
+
+.experience-item.forward {
+  transform-origin: left;
+}
+
+.experience-item.active.backward {
+  transform-origin: left;
+}
+
+.experience-item.active.forward {
+  transform-origin: right;
 }
 
 .experience-item-info {
   padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
-.experience-item.active {
-  transform-origin: top;
-  transform: scaleY(1);
+.experience-item-points {
+  text-align: left;
 }
 
 .arrow {
@@ -71,4 +115,10 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+}
+
+@media (min-width: 600px) {
+  .arrow {
+    width: 30px;
+  }
 }

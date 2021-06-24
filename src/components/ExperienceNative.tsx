@@ -4,25 +4,28 @@ import {jobs, ExperienceItem} from "../static/jobs";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { useSwipeable } from "react-swipeable";
 
+type Direction = "forward" | "backward";
+
 interface JobItemProps {
   item: ExperienceItem
   isActive: boolean
   nextJob: () => void
   prevJob: () => void
+  direction: Direction
 }
 
 function JobItem(props: JobItemProps) {
-  const {item, isActive, nextJob, prevJob} = props;
+  const {item, isActive, nextJob, prevJob, direction} = props;
 
   return (
-    <div key={item.id} className={`${styles["experience-item"]} ${isActive ? styles["active"] : ""}`}>
+    <div key={item.id} className={`${styles["experience-item"]} ${isActive ? styles["active"] : ""} ${styles[direction]}`}>
       <div className={`${styles["arrow"]} light-green`}
            onClick={prevJob}>❮</div>
       <div className={styles["experience-item-info"]}>
-        {item.companyName}<br />
-        {item.title}<br />
-        {item.time}<br />
-        <ul>
+        <h3 className="light-green">{item.companyName}</h3>
+        <span>{item.title}</span>
+        <span>{item.time}</span>
+        <ul className={styles["experience-item-points"]}>
         {item.bulletPoints.map(point => (
           <li>
             {point}
@@ -42,32 +45,48 @@ function JobItem(props: JobItemProps) {
 
 interface JobSelectorItemProps {
   item: ExperienceItem
-  setActiveItem: (job) => void
-  isActive: boolean
+  activeItem: ExperienceItem
+  setActiveItem: () => void
+  setDirection: (direction: Direction) => void
+  direction: Direction
 }
 
 function JobSelectorItem(props: JobSelectorItemProps) {
-  const {item, setActiveItem, isActive} = props;
+  const {item, setActiveItem, activeItem, setDirection, direction} = props;
+
+  function handleClick() {
+    if (item.id > activeItem.id) {
+      setDirection("forward");
+    } else {
+      setDirection("backward");
+    }
+
+    setActiveItem();
+  }
 
   return (
-    <div key={item.id} className={`${styles["job-selector"]} ${isActive ? styles["active"] : ""}`}
-         onClick={() => setActiveItem(item)}>
+    <div key={item.id} className={`${styles["job-selector"]} ${activeItem.id === item.id ? styles["active"] : ""} ${styles[direction]}`}
+         onClick={handleClick}>
     </div>
   )
 }
 
 export default function ExperienceNative() {
   const [activeItem, setActiveItem] = useState<ExperienceItem>(jobs[1]);
+  const [direction, setDirection] = useState<Direction>("forward");
 
   const experienceSelectorItems = jobs.map(job => (
     <JobSelectorItem key={job.id}
                      item={job}
-                     setActiveItem={(job) => setActiveItem(job)}
-                     isActive={job.id === activeItem.id} />
+                     activeItem={activeItem}
+                     setActiveItem={() => setActiveItem(job)}
+                     setDirection={setDirection}
+                     direction={direction} />
   ))
 
   function nextJob() {
     const index = jobs.indexOf(activeItem);
+    setDirection("forward");
     if (index+2 > jobs.length) {
       setActiveItem(jobs[0]);
       return;
@@ -78,6 +97,7 @@ export default function ExperienceNative() {
 
   function prevJob() {
     const index = jobs.indexOf(activeItem);
+    setDirection("backward")
     if (index === 0) {
       setActiveItem(jobs[jobs.length-1]);
       return;
@@ -91,7 +111,8 @@ export default function ExperienceNative() {
              item={job}
              isActive={job.id === activeItem.id}
              nextJob={nextJob}
-             prevJob={prevJob} />
+             prevJob={prevJob}
+             direction={direction} />
   ))
 
   const handlers = useSwipeable({

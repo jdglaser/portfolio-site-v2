@@ -20,7 +20,7 @@ export default function Experience() {
     <div className="experience-section">
       <SectionHeader label="Experience" />
       {isDesktop ? (
-        <ExperienceDesktop />
+        <ExperienceNative />
         ) : (
          <ExperienceNative />
          )
