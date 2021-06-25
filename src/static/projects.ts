@@ -17,7 +17,7 @@ export const projects: Project[] = [
   },
   {
     name: "Portfolio Site",
-    description: "The code to my portfolio site. Built with ReactJS",
+    description: "The code to my portfolio site. Built with ReactJS.",
     link: "https://github.com/jdglaser/portfolio-site-v2"
   },
   {

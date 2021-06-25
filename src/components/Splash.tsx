@@ -16,7 +16,9 @@ export default function Splash() {
               I currently work as a software engineer at <a href="https://www.northwesternmutual.com/" className="light-green hover-animate">Northwestern Mutual</a>.</span>
             </div>
             <div>
-              <button>Contact</button>
+              <a href="mailto:jarred.glaser@gmail.com">
+                <button>Contact</button>
+              </a>
             </div>
           </Fade>
         </Delayed>

@@ -1,0 +1,37 @@
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.contact-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 25px;
+}
+
+.contact-link {
+  display: flex;
+}
+
+.contact-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 55px;
+  height: 55px;
+  border-radius: 10px;
+  background-color: #0e305a;
+  transition: box-shadow 0.3s;
+}
+
+.contact-icon:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.contact-icon-image {
+  width: 40px;
+  height: 40px;
+}

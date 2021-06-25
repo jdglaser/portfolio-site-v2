@@ -3,6 +3,12 @@
   flex-direction: column;
   gap: 25px;
   margin-bottom: 50px;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
   align-items: center;
 }
 
@@ -22,6 +28,7 @@
   padding: 15px;
   height: 100%;
   background-color: #0e305a;
+  border-radius: 10px;
   cursor: pointer;
   max-width: 450px;
   transition: box-shadow 0.4s

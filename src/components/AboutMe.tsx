@@ -1,7 +1,7 @@
 import React from "react";
 import { Fade } from "react-awesome-reveal";
 import SectionHeader from "./SectionHeader";
-import me from "../img/me.jpeg";
+import me from "../static/img/me.jpeg";
 import "../style/about-me.css";
 
 interface SkillItemProp {

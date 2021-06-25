@@ -16,12 +16,13 @@ function ProjectItem(props: ProjectItemProps) {
 
   return (
     <>
-      <Fade direction="up" fraction={0.001} triggerOnce>
-        <a href={link} target="_blank">
+      <Fade direction="up" fraction={0.15} triggerOnce>
+        <a href={link}>
           <div className={styles["project-item"]}>
             <h3 className={`${styles["project-item-header"]} light-green`}>{name}</h3>
             <span>{description}</span>
           </div>
+          <a id={`projects-${name}`} />
         </a>
       </Fade>
     </>
@@ -37,26 +38,32 @@ export default function Projects() {
   ));
 
   function showMore() {
-    setToShow(toShow + 3);
-    scroll.scrollMore(200, {duration: 0});
+    const newToShow = (toShow + 3) > projects.length ? projects.length : toShow + 3;
+    setToShow(newToShow);
+    const lastElementName = projects[toShow-1].name;
+    document.getElementById(`projects-${lastElementName}`)?.scrollIntoView(true);
   }
 
   function showLess() {
     setToShow(3);
-    window.location.replace("#projects");
+    document.getElementById("projects")?.scrollIntoView(true);
   }
 
-  const showButton = toShow <= projects.length ?
+  const showButton = toShow < projects.length ?
     (<button onClick={showMore}>Show more</button>) :
     (<button onClick={showLess}>Show less</button>)
 
   return (
     <div className={styles["projects-section"]}>
-      <SectionHeader label="Projects" />
-      <div className={styles["project-list"]}>
-        {projectItems.slice(0,toShow)}
-      </div>
-      {showButton}
+      <Fade direction="up" triggerOnce fraction={0.15}>
+        <SectionHeader label="Projects" />
+        <div className={styles["project-content"]}>
+          <div className={styles["project-list"]}>
+            {projectItems.slice(0,toShow)}
+          </div>
+          {showButton}
+        </div>
+      </Fade>
     </div>
   )
 }

@@ -128,12 +128,14 @@ export default function ExperienceNative() {
     <div className={styles["experience-section"]}>
       <Fade direction="up" fraction={0.01} triggerOnce>
           <SectionHeader label="Experience" />
-          <div className={styles["jobs"]} {...handlers}>
-            <div className={styles["job-selectors"]}>
-              {experienceSelectorItems}
-            </div>
-            <div className={styles["selected-job"]}>
-              {jobItems}
+          <div className={styles["experience-content"]}>
+            <div className={styles["jobs"]} {...handlers}>
+              <div className={styles["job-selectors"]}>
+                {experienceSelectorItems}
+              </div>
+              <div className={styles["selected-job"]}>
+                {jobItems}
+              </div>
             </div>
           </div>
       </Fade>
