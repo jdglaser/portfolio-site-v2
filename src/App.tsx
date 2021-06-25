@@ -42,8 +42,10 @@ function App() {
 
         <div className="footer">
           <span>
-            Website created by Jarred Glaser. Checkout the 
-            code <a href="https://github.com/jdglaser/portfolio-site-v2"
+            Website created by Jarred Glaser.
+          </span>
+          <span>
+            Checkout the code <a href="https://github.com/jdglaser/portfolio-site-v2"
                     className="light-green">here</a>.
           </span>
         </div>

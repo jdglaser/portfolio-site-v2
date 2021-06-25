@@ -92,7 +92,7 @@ a.hover-animate:hover::after {
 }
 
 .content {
-  padding: 25px 25px 10px 25px;
+  padding: 25px 25px 15px 25px;
   display: flex;
   flex-direction: column;
 }
@@ -127,7 +127,9 @@ a.anchor {
 
 .footer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   font-size: 10pt;
 }
 
@@ -135,7 +137,7 @@ a.anchor {
 
 @media (min-width: 600px) {
   .content {
-    padding: 75px 75px 10px 75px;
+    padding: 75px 75px 15px 75px;
     margin-top: 0px;
   }
 }
