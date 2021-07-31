@@ -19,15 +19,6 @@ export const jobs: ExperienceItem[] = [
     ]
   },
   {
-    id: 2,
-    companyName: "Microsoft TEALS",
-    title: "Volunteer Computer Science Teacher",
-    time: "Jun 2021 - Present",
-    bulletPoints: [
-      "Teach computer science part time (2-3 hours per week) to high school students"
-    ]
-  },
-  {
     id: 3,
     companyName: "Northwestern Mutual",
     title: "Data Engineer",
