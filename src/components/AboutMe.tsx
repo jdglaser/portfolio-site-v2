@@ -52,10 +52,7 @@ export default function AboutMe() {
                 <br /><br />
                 Today, I work as a full stack software engineer.
                 I love using all of the various technologies and tools at 
-                my disposal to solve unique and interesting problems. I also enjoy sharing
-                my passion for software engineering and computer science by volunteering
-                part-time as a high school computer science teacher through 
-                the <a href="https://www.microsoft.com/en-us/teals" className="hover-animate light-green" target="_blank">Microsoft TEALS</a> program.
+                my disposal to solve unique and interesting problems.
             </div>
             <div className="pic-holder">
               <img className="me" src={me}></img>
