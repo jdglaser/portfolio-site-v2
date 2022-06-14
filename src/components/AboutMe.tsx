@@ -1,8 +1,8 @@
 import React from "react";
 import { Fade } from "react-awesome-reveal";
-import SectionHeader from "./SectionHeader";
 import me from "../static/img/me.jpeg";
 import "../style/about-me.css";
+import SectionHeader from "./SectionHeader";
 
 interface SkillItemProp {
   label: string
@@ -50,7 +50,7 @@ export default function AboutMe() {
                 I began my career in tech working in analytics and data engineering where I learned to wrangle data and gather
                 insights from it.
                 <br /><br />
-                Today, I work as a full stack software engineer.
+                Today, I work as a senior software engineer.
                 I love using all of the various technologies and tools at 
                 my disposal to solve unique and interesting problems.
             </div>
