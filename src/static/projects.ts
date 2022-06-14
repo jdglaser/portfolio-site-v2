@@ -16,14 +16,19 @@ export const projects: Project[] = [
     link: "https://github.com/jdglaser/portfolio-site-v2"
   },
   {
+    name: "rust-actix-grocery-list-api",
+    description: "A quick example API created in Rust using the actix-web framework.",
+    link: "https://github.com/jdglaser/rust-actix-grocery-list-api"
+  },
+  {
     name: "fastapi-example-project",
     description: "A template project to setup a robust REST API with FastAPI framework.",
     link: "https://github.com/jdglaser/fastapi-example-project"
   },
   {
-    name: "rust-actix-grocery-list-api",
-    description: "A simple REST API to test out the Rust actix web framework",
-    link: "https://github.com/jdglaser/rust-actix-grocery-list-api"
+    name: "MA Thesis",
+    description: "My 2018 Masters Thesis: \"Using Machine Learning and Google Searches to Predict Stock Market Changes\"",
+    link: "https://github.com/jdglaser/mathesis"
   },
   {
     name: "fastapi-example-project-ui",
