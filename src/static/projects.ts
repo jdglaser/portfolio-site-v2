@@ -26,11 +26,6 @@ export const projects: Project[] = [
     link: "https://github.com/jdglaser/fastapi-example-project"
   },
   {
-    name: "MA Thesis",
-    description: "My 2018 Masters Thesis: \"Using Machine Learning and Google Searches to Predict Stock Market Changes\"",
-    link: "https://github.com/jdglaser/mathesis"
-  },
-  {
     name: "fastapi-example-project-ui",
     description: "A UI built with React to interact with fast-api-example-project REST API",
     link: "https://github.com/jdglaser/fastapi-example-project-ui"
