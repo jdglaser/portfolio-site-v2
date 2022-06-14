@@ -10,12 +10,23 @@ export const jobs: ExperienceItem[] = [
   {
     id: 1,
     companyName: "Northwestern Mutual",
-    title: "Software Engineer",
-    time: "Aug 2020 - Present",
+    title: "Sr Software Engineer",
+    time: "Apr 2022 - Present",
     bulletPoints: [
-      "Build and maintain various business facing RESTful web applications using Java (Spring), Python (Flask), React, and SQL",
-      "Deploy applications to AWS using CI/CD pipelines",
-      "Plan software engineering work using Agile development best practices"
+      "Worked with a team to build and maintain a homegrown data lake solution that use AWS, Gitlab CI/CD, Java, Python, and React",
+      "Built an application that uses Python/Docker batch jobs to pull daily investment offerings from Bloomberg APIs, store the data, and expose it to end users through a Java/Spring REST API and React frontend",
+      "Modernized legacy ETL processes by migrating them to Python/Docker batch jobs"
+    ]
+  },
+  {
+    id: 2,
+    companyName: "Northwestern Mutual",
+    title: "Software Engineer",
+    time: "Aug 2020 - Apr 2022",
+    bulletPoints: [
+      "Built and maintained various business facing web applications using Java (Spring), React, and SQL",
+      "Deployed applications to AWS using CI/CD pipelines",
+      "Planned software engineering work using Agile development best practices"
     ]
   },
   {
