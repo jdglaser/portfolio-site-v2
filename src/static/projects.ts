@@ -6,6 +6,11 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    name: "rust-codenames",
+    description: "A Codenames clone built using Rust and React",
+    link: "https://github.com/jdglaser/rust-codenames"
+  },
+  {
     name: "fast-to-sql",
     description: "A Python library that improves uploading Pandas dataframes to MS SQL Server.",
     link: "https://github.com/jdglaser/fast-to-sql"
