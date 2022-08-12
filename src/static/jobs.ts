@@ -13,9 +13,9 @@ export const jobs: ExperienceItem[] = [
     title: "Sr Software Engineer",
     time: "Apr 2022 - Present",
     bulletPoints: [
-      "Worked with a team to build and maintain a homegrown data lake solution that use AWS, Gitlab CI/CD, Java, Python, and React",
-      "Built an application that uses Python/Docker batch jobs to pull daily investment offerings from Bloomberg APIs, store the data, and expose it to end users through a Java/Spring REST API and React frontend",
-      "Modernized legacy ETL processes by migrating them to Python/Docker batch jobs"
+      "Supported development of investment applications and microservices hosted on AWS EKS and built in Java/Spring and React",
+      "Built and maintained a data lake solution using AWS (S3, Aurora Postgres, Redshift, Kubernetes), Gitlab CI/CD, Java/Spring, Python, and React",
+      "Built an application that used Python docker batch jobs to pull daily investment offerings from Bloomberg APIs, store the data, and expose it to end users through a Java/Spring REST API and React frontend"
     ]
   },
   {
@@ -24,8 +24,8 @@ export const jobs: ExperienceItem[] = [
     title: "Software Engineer",
     time: "Aug 2020 - Apr 2022",
     bulletPoints: [
-      "Built and maintained various business facing web applications using Java (Spring), React, and SQL",
-      "Deployed applications to AWS using CI/CD pipelines",
+      "Supported development of investment applications and microservices hosted on AWS EKS and built in Java/Spring and React",
+      "Modernized legacy ETL processes by migrating them to Python/Docker batch jobs",
       "Planned software engineering work using Agile development best practices"
     ]
   },
