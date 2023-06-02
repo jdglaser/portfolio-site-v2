@@ -51,26 +51,26 @@ export default function AboutMe() {
           <div className="about-me-top-container">
             <div className="about-me-text dark-grey">
               Hello! I'm Jarred, and I love building things with code.
-              <br /><br />
+              < br /> <br />
               I began my career in tech working in analytics and data engineering where I learned to wrangle data and gather
               insights from it.
-              <br /><br />
+              < br /> <br />
               Today, I work as a full stack software engineer.
               I love using all of the various technologies and tools at
               my disposal to solve unique and interesting problems.
-            </div>
+            </div >
             <div className="pic-holder">
               <img className="me" src={me}></img>
             </div>
-          </div>
+          </div >
           <div>Here are some things I know...</div>
-        </Fade>
+        </Fade >
         <div className="skills-list">
           <Fade direction="left" fraction={0.15} duration={250} cascade triggerOnce>
             {skillItems}
           </Fade>
         </div>
-      </div>
+      </div >
     </>
   )
 }

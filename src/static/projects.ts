@@ -51,6 +51,11 @@ export const projects: Project[] = [
     link: "https://github.com/jdglaser/fastapi-example-project-ui"
   },
   {
+    name: "MA Thesis",
+    description: "My 2018 Masters Thesis: \"Using Machine Learning and Google Searches to Predict Stock Market Changes\"",
+    link: "https://github.com/jdglaser/mathesis"
+  },
+  {
     name: "Census Data Warehouse",
     description: "A SQL Data Warehouse housing US Census data, built in AWS using Python for ETL.",
     link: "https://github.com/jdglaser/census-dw"
