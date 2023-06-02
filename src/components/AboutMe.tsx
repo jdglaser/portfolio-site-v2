@@ -1,8 +1,8 @@
 import React from "react";
-import { Fade } from "react-awesome-reveal";
-import SectionHeader from "./SectionHeader";
+import {Fade} from "react-awesome-reveal";
 import me from "../static/img/me.jpeg";
 import "../style/about-me.css";
+import SectionHeader from "./SectionHeader";
 
 interface SkillItemProp {
   label: string
@@ -14,7 +14,7 @@ function SkillItem(props: SkillItemProp) {
   return (
     <div key={label} className="skill-item">
       <span className="light-green" style={{fontSize: "8pt"}}>► </span>
-      <span className="light-grey">{label}</span>
+      <span className="dark-grey">{label}</span>
     </div>
   )
 }
@@ -22,11 +22,16 @@ function SkillItem(props: SkillItemProp) {
 const skills = [
   "Java",
   "Python",
-  "Javascript",
+  "Javascript/Typescript",
+  "Rust",
   "HTML5/CSS",
   "SQL",
+  "Postgres",
+  "Snowflake",
+  "Redshift",
   "Git & CI/CD",
-  "AWS & Terraform",
+  "Terraform",
+  "AWS & GCP",
   "Agile Software Engineering",
   "Data Engineering",
   "Power BI & Tableau",
@@ -45,14 +50,14 @@ export default function AboutMe() {
           </div>
           <div className="about-me-top-container">
             <div className="about-me-text dark-grey">
-                Hello! I'm Jarred, and I love building things with code. 
-                <br /><br />
-                I began my career in tech working in analytics and data engineering where I learned to wrangle data and gather
-                insights from it.
-                <br /><br />
-                Today, I work as a full stack software engineer.
-                I love using all of the various technologies and tools at 
-                my disposal to solve unique and interesting problems.
+              Hello! I'm Jarred, and I love building things with code.
+              <br /><br />
+              I began my career in tech working in analytics and data engineering where I learned to wrangle data and gather
+              insights from it.
+              <br /><br />
+              Today, I work as a full stack software engineer.
+              I love using all of the various technologies and tools at
+              my disposal to solve unique and interesting problems.
             </div>
             <div className="pic-holder">
               <img className="me" src={me}></img>
