@@ -73,7 +73,7 @@ export default function AboutMe() {
               I began my career in tech working in analytics and data engineering where I learned to wrangle data and gather
               insights from it.
               < br /> <br />
-              Today, I work as a full stack software engineer.
+              Today, I work as a senior software engineer.
               I love using all of the various technologies and tools at
               my disposal to solve unique and interesting problems.
             </div >
