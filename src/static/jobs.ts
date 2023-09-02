@@ -10,34 +10,33 @@ export const jobs: ExperienceItem[] = [
   {
     id: 1,
     companyName: "Northwestern Mutual",
-    title: "Sr. Software Engineer",
-    time: "April 2022 - Present",
+    title: "Senior Data Engineer",
+    time: "July 2023 - Present",
     bulletPoints: [
-      "Built and maintained a data ingestion solution using AWS, Snowflake, Java/Spring, Python, and React.",
-      "Led the effort to move team's data infrastructure to a modern Snowflake + DBT solution.",
-      "Played major role in large scale batch tool migration effort, and built custom CI tooling used throughout the department.",
-      "Supported development of business facing applications and microservices hosted on AWS and built with Java/Spring and React.",
+      "Built and maintained Gitlab CI/CD tooling using Python and Docker for our Snowflake and DBT-based data platform enabling self service access for engineering teams and leading to improved platform adoption across the department",
+      "Developed a Python FastAPI and React web application hosted on AWS EKS that served a custom Office web add-in allowing business users to publish custom Excel functions and driving improved accessibility for data consumers",
+      "Led meetings with engineering and business teams to consult on data engineering best practices and gather requirements for the data platform using agile best practices to prioritize incoming requests",
+      "Conducted daily agile standups leading agile ceremonies and working with the engineering team to delegate tasks"
     ]
   },
   {
     id: 2,
     companyName: "Northwestern Mutual",
-    title: "Software Engineer",
-    time: "Aug 2020 - April 2022",
+    title: "Sr. Software Engineer",
+    time: "April 2022 - July 2023",
     bulletPoints: [
-      "Supported development of business facing applications and microservices hosted on AWS and built with Java/Spring and React.",
-      "Led the development effort to build an application that used Python docker batch jobs to pull daily investment offerings from external APIs, store the data, and expose it to end users through a Java/Spring REST API and React frontend.",
-      "Modernized legacy ETL processes by migrating them to Python/Docker batch jobs."
+      "Architected and deployed a Java/Spring and React web app with AWS EKS allowing investment analysts to manage and explore investment opportunities resulting in an increase of over $1.2m in investment profits for the company",
+      "Developed a custom data ingestion microservice using Java/Spring, AWS EKS, and S3 that integrated with a Snowflake data platform enabling our engineering team to easily onboard over 100GB of data from various sources",
+      "Modernized several legacy ETL processes to Python Docker batch jobs resulting in a ~80% decrease in data quality issues and unexpected failures and downtime for our daily batch processes",
     ]
   },
   {
     id: 3,
     companyName: "Northwestern Mutual",
-    title: "Data Engineer",
-    time: "Jan 2020 - Aug 2020",
+    title: "Software Engineer",
+    time: "Jan 2020 - April 2022",
     bulletPoints: [
-      "Developed data pipelines using Python and SQL",
-      "Maintained and developed business intelligence dashboards using Power BI"
+      "Developed and maintained a Java/Spring and React web application on AWS (EKS, RDS, S3) enabling investment analysts to monitor and manage their investment portfolios resulting in increased investment revenue for the company",
     ]
   },
   {
@@ -46,19 +45,16 @@ export const jobs: ExperienceItem[] = [
     title: "Business Intelligence Engineer",
     time: "Sep 2019 - Jan 2020",
     bulletPoints: [
-      "Helped deliver an automated machine learning solution in Alteryx, SQL, and Python for a large client that compared performance metrics across hundreds of franchise locations.",
-      "Built out analytics infrastructure and tooling for various clients across several industries."
+      "Provided data engineering and analytics consulting work to clients across various industries streamlining and automating processes and leading to greater analytical insights and decreased time spent on manual tasks",
     ]
   },
   {
     id: 5,
     companyName: "Uline",
-    title: "Web Data Analyst",
+    title: "Data Analyst",
     time: "Jan 2019 - Sep 2019",
     bulletPoints: [
-      "Used Python, SQL, and Google Analytics API to modernized and improve reporting capabilities on high volume traffic E-commerce website",
-      "Modeled data warehouse tables for web and marketing analytics",
-      "Created BI dashboards and automated static report creation using Power BI, Python, SQL, HTML, and CSS"
+      "Modernized and automated reporting capabilities on the company's high volume ecommerce site with Python, MS SQL Server, and Power BI enabling improved insights into SEO and website conversions",
     ]
   },
   {
@@ -67,9 +63,7 @@ export const jobs: ExperienceItem[] = [
     title: "Business Intelligence Analyst",
     time: "Oct 2017 - Jan 2019",
     bulletPoints: [
-      "Built web analytics ETL pipelines using Google Analytics, Python, SQL, and SSIS.",
-      "Worked on development of marketing analytics data warehouse.",
-      "Built Business Intelligence dashboards and reports using Tableau and R."
+      "Implemented Google Analytics across ~100 company brand websites and used Python and SQL Server to set up a web marketing data warehouse driving stronger insights into the company's website performance and marketing KPIs",
     ]
   },
 ]

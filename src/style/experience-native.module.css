@@ -90,6 +90,7 @@
   transform: scaleX(0);
   transition: transform 0.3s;
   justify-content: center;
+  padding-bottom: 20px;
 }
 
 .experience-item.active {

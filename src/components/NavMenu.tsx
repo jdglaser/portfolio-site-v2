@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react"
-import Hamburger from "hamburger-react";
-import { useCommonProps } from "../hooks";
-import resumeUrl from "../static/resume_jarredglaser.pdf?url";
+import React, {useEffect, useState} from "react";
+import {useCommonProps} from "../hooks";
+import resumeUrl from "../static/resume_jarredglaser_01.pdf?url";
 
 export default function NavMenu() {
   const [hideNoAnimation, setHideNoAnimation] = useState(false);

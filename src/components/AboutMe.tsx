@@ -6,39 +6,57 @@ import SectionHeader from "./SectionHeader";
 
 interface SkillItemProp {
   label: string
+  skills: string[]
 }
 
 function SkillItem(props: SkillItemProp) {
-  const {label} = props;
+  const {label, skills} = props;
+
+  const skillList = skills.map(skill => (
+    <li key={skill}>
+      <span className="light-grey">{skill}</span>
+    </li>
+  ))
 
   return (
     <div key={label} className="skill-item">
-      <span className="light-green" style={{fontSize: "8pt"}}>► </span>
-      <span className="dark-grey">{label}</span>
+      <div>
+        <div className="light-grey">{label}</div>
+      </div>
+      <div>
+        <div className="section-header-line"></div>
+      </div>
+      <ul>
+        {skillList}
+      </ul>
     </div>
   )
 }
 
-const skills = [
-  "Java",
-  "Python",
-  "Javascript/Typescript",
-  "Rust",
-  "HTML5/CSS",
-  "SQL",
-  "Postgres",
-  "Snowflake",
-  "Redshift",
-  "Git & CI/CD",
-  "Terraform",
-  "AWS & GCP",
-  "Agile Software Engineering",
-  "Data Engineering",
-  "Power BI & Tableau",
-  "Machine Learning & Statistics"
+const skills: SkillItemProp[] = [
+  {
+    label: "Languages",
+    skills: ["Python", "Java", "TypeScript", "JavaScript", "HTML", "CSS", "Rust"]
+  },
+  {
+    label: "Frameworks",
+    skills: ["FastAPI", "Starlette", "Flask", "Spring", "Node", "React"]
+  },
+  {
+    label: "Tools",
+    skills: ["Git", "GitLab CI/CD", "Docker", "Terraform", "Flyway", "Kubernetes", "AWS (EKS, S3, Lambda, API Gateway)", "Kafka", "Jira"]
+  },
+  {
+    label: "Databases & Analytics",
+    skills: ["PostgreSQL", "MS SQL Server", "AWS Redshift", "Snowflake", "DBT", "Power BI", "Tableau"]
+  },
+  {
+    label: "Software Development",
+    skills: ["Agile", "Full Stack Development", "Microservices", "Data Engineering", "Data Pipelines"]
+  }
 ]
 
-const skillItems = skills.map(skill => (<SkillItem key={skill} label={skill} />))
+const skillItems = skills.map(({label, skills}) => (<SkillItem label={label} skills={skills} />))
 
 export default function AboutMe() {
   return (
@@ -49,7 +67,7 @@ export default function AboutMe() {
             <SectionHeader label="About Me" />
           </div>
           <div className="about-me-top-container">
-            <div className="about-me-text dark-grey">
+            <div className="about-me-text light-grey">
               Hello! I'm Jarred, and I love building things with code.
               < br /> <br />
               I began my career in tech working in analytics and data engineering where I learned to wrangle data and gather
@@ -64,12 +82,10 @@ export default function AboutMe() {
             </div>
           </div >
           <div>Here are some things I know...</div>
-        </Fade >
-        <div className="skills-list">
-          <Fade direction="left" fraction={0.15} duration={250} cascade triggerOnce>
+          <div className="skills-section">
             {skillItems}
-          </Fade>
-        </div>
+          </div>
+        </Fade >
       </div >
     </>
   )
