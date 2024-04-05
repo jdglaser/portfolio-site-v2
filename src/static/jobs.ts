@@ -14,10 +14,10 @@ export const jobs: ExperienceItem[] = [
     time: "April 2022 - Present",
     bulletPoints: [
       "Architected and deployed a Java Spring and React web app with AWS EKS allowing investment analysts to manage and explore investment opportunities resulting in an increase of over $1.2m in investment profits for the company",
-      "Built a Python microservice hosted on Kubernetes allowing communication between on-prem enterprise batch jobs and AWS Batch (EKS) jobs and resources",
-      "Developed a custom GitLab CI/CD template using Python and Docker to enhance config-as-code state management for our enterprise batch solution, improving developer productivity and reducing bugs when deploying batch pipelines",
+      "Engineered a Python microservice hosted on Kubernetes that enabled communication between our on-prem batch orchestration tool and AWS Batch (EKS), improving cloud integrations and scalability of our on-prem batch jobs",
+      "Developed a custom GitLab CI/CD template using Python and Docker to enhance config-as-code state management for our enterprise batch solution, improving developer productivity and reducing bugs when deploying batch jobs",
       "Created a high-performance multithreaded data transfer CLI tool in Rust, facilitating the seamless transfer of 100GB+ data between AWS Redshift and Snowflake databases",
-      "Built and deployed custom Snowflake external functions using AWS Lambda and API gateway, allowing analysts to enrich data by pulling information from external APIs and services directly through Snowflake SQL queries",
+      "Built and deployed custom Snowflake external functions using AWS Lambda and API gateway, allowing analysts to enrich data by pulling information from external APIs and services directly through SQL queries",
       "Led daily stand-ups following agile best practices and allowing our team to efficiently handle incoming requests",
     ],
   },
