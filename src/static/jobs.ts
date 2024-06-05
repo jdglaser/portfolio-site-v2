@@ -10,8 +10,15 @@ export const jobs: ExperienceItem[] = [
   {
     id: 1,
     companyName: "Northwestern Mutual",
+    title: "Senior Data Engineer",
+    time: "June 2023 - Present",
+    bulletPoints: [],
+  },
+  {
+    id: 2,
+    companyName: "Northwestern Mutual",
     title: "Senior Software Engineer",
-    time: "April 2022 - Present",
+    time: "April 2022 - June 2023",
     bulletPoints: [
       "Architected and deployed a Java Spring and React web app with AWS EKS allowing investment analysts to manage and explore investment opportunities resulting in an increase of over $1.2m in investment profits for the company",
       "Engineered a Python microservice hosted on Kubernetes that enabled communication between our on-prem batch orchestration tool and AWS Batch (EKS), improving cloud integrations and scalability of our on-prem batch jobs",
@@ -22,7 +29,7 @@ export const jobs: ExperienceItem[] = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     companyName: "Northwestern Mutual",
     title: "Software Engineer",
     time: "Jan 2020 - April 2022",
@@ -33,7 +40,7 @@ export const jobs: ExperienceItem[] = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     companyName: "Continuus Technologies",
     title: "Business Intelligence Engineer",
     time: "Sep 2019 - Jan 2020",
@@ -42,7 +49,7 @@ export const jobs: ExperienceItem[] = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     companyName: "Uline",
     title: "Data Analyst",
     time: "Jan 2019 - Sep 2019",
@@ -51,7 +58,7 @@ export const jobs: ExperienceItem[] = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     companyName: "Johnson Controls",
     title: "Business Intelligence Analyst",
     time: "Oct 2017 - Jan 2019",

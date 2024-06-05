@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
-import styles from "../style/experience-native.module.css";
-import {jobs, ExperienceItem} from "../static/jobs";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { useSwipeable } from "react-swipeable";
-import SectionHeader from "./SectionHeader";
+import React, {useState} from "react";
 import {Fade} from "react-awesome-reveal";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import {useSwipeable} from "react-swipeable";
+import {ExperienceItem, jobs} from "../static/jobs";
+import styles from "../style/experience-native.module.css";
+import SectionHeader from "./SectionHeader";
 
 type Direction = "forward" | "backward";
 
@@ -28,13 +28,6 @@ function JobItem(props: JobItemProps) {
           <h3 className="light-green">{item.companyName}</h3>
           <span>{item.title}</span>
           <span>{item.time}</span>
-          <ul className={styles["experience-item-points"]}>
-          {item.bulletPoints.map(point => (
-            <li>
-              {point}
-            </li>
-          ))}
-          </ul>
         </div>
         <div className={`${styles["arrow"]} light-green`}
             onClick={nextJob}>

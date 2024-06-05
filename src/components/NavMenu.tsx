@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {useCommonProps} from "../hooks";
-import resumeUrl from "../static/resume_jarredglaser_12.pdf?url";
+import resumeUrl from "../static/resume_jarredglaser_15.pdf?url";
 
 export default function NavMenu() {
   const [hideNoAnimation, setHideNoAnimation] = useState(false);
