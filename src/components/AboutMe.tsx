@@ -40,19 +40,19 @@ const skills: SkillItemProp[] = [
   },
   {
     label: "Frameworks",
-    skills: ["FastAPI", "Starlette", "Flask", "Spring", "Node", "React"]
+    skills: ["FastAPI", "Litestar", "Starlette", "Flask", "Spring", "Node", "React"]
   },
   {
     label: "Tools",
-    skills: ["Git", "GitLab CI/CD", "Docker", "Terraform", "Flyway", "Kubernetes", "AWS (EKS, S3, Lambda, API Gateway)", "Kafka", "Jira"]
+    skills: ["Git", "GitLab CI/CD", "Docker", "Terraform", "Flyway", "Kubernetes", "AWS (EKS, S3, Lambda, API Gateway, EventBridge, AWS Batch, CDK)", "Jira"]
   },
   {
     label: "Databases & Analytics",
-    skills: ["PostgreSQL", "MS SQL Server", "AWS Redshift", "Snowflake", "DBT", "Power BI", "Tableau"]
+    skills: ["Snowflake", "DBT", "PostgreSQL", "MS SQL Server", "AWS Redshift", "Power BI", "Tableau"]
   },
   {
     label: "Software Development",
-    skills: ["Agile", "Full Stack Development", "Microservices", "Data Engineering", "Data Pipelines"]
+    skills: ["Agile", "Full Stack Development", "Software Architecture", "Software Engineering", "Microservices", "Data Engineering", "Data Pipelines", "Data Modeling"]
   }
 ]
 
@@ -73,7 +73,7 @@ export default function AboutMe() {
               I began my career in tech working in analytics and data engineering where I learned to wrangle data and gather
               insights from it.
               < br /> <br />
-              Today, I work as a senior software engineer.
+              Today, I work as a lead software engineer.
               I love using all of the various technologies and tools at
               my disposal to solve unique and interesting problems.
             </div >

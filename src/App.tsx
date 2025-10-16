@@ -10,7 +10,6 @@ import Projects from './components/Projects'
 import Contact from './components/Contact'
 
 function App() {
-  console.log("here")
 
   const {screenDisabled} = useCommonProps();
   const {allowScroll, blockScroll} = useScrollBlock();

@@ -13,7 +13,7 @@ export default function Splash() {
               <span className="light-green cool-font">Hello, my name is</span>
               <h1 className="light-green">Jarred Glaser</h1>
               <span>I'm a Milwaukee-based software engineer. I enjoy building solutions and solving challenging problems.
-                I currently work as a senior software engineer at <a href="https://www.northwesternmutual.com/" className="light-green hover-animate">Northwestern Mutual</a>.</span>
+                I currently work as a lead software engineer at <a href="https://www.northwesternmutual.com/" className="light-green hover-animate">Northwestern Mutual</a>.</span>
             </div>
             <div>
               <a href="mailto:jarred.glaser@gmail.com">

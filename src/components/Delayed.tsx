@@ -12,7 +12,6 @@ export default function Delayed(props: DelayedProps) {
 
   useEffect(() => {
     setTimeout(() => {
-      console.log("Timeout done!");
       setHidden(false);
     }, waitForSeconds * 1000)
   })
@@ -21,7 +20,6 @@ export default function Delayed(props: DelayedProps) {
     return null;
   }
 
-  console.log("Made it here!")
   return (
     <>
       {children}

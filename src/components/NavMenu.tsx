@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {useCommonProps} from "../hooks";
-import resumeUrl from "../static/resume_jarredglaser_15.pdf?url";
+import resumeUrl from "../static/resume_jarredglaser_16.pdf?url";
 
 export default function NavMenu() {
   const [hideNoAnimation, setHideNoAnimation] = useState(false);
@@ -18,6 +18,11 @@ export default function NavMenu() {
     closeMenu();
   }
 
+  function handleResumeClick() {
+    window.open(resumeUrl, '_blank');
+    setHideNoAnimation(true);
+    closeMenu();
+  }
   if (hideNoAnimation) {
     return null;
   }
@@ -30,7 +35,7 @@ export default function NavMenu() {
           <a onClick={handleClick} href="#experience" className="hover-animate">Experience</a>
           <a onClick={handleClick} href="#projects" className="hover-animate">Projects</a>
           <a onClick={handleClick} href="#contact" className="hover-animate">Contact</a>
-          <button onClick={handleClick}><a href={resumeUrl} target="_blank">Resume</a></button>
+          <button onClick={handleResumeClick}>Resume</button>
         </div>
       </div>
     </>
